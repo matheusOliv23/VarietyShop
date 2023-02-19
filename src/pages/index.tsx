@@ -1,9 +1,9 @@
 import type { NextPage } from "next"
+import Header from "src/components/Header"
+import { navMock } from "src/components/Header/mock"
 
 const Home: NextPage = () => {
-  return (
-    <h1 className="text-3xl font-bold text-cyan-300 underline">Hello world!</h1>
-  )
+  return <Header nav={navMock} />
 }
 
 export default Home
