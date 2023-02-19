@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react"
 import Header from "./index"
 import { navMock } from "./mock"
 
-const { getByTestId, getAllByTestId, getByText } = screen
+const { getByTestId, getAllByTestId } = screen
 
 describe("<Header />", () => {
   it("should render by default", () => {
@@ -29,8 +29,8 @@ describe("<Header />", () => {
   it("should render the logo text", () => {
     render(<Header nav={navMock} />)
 
-    const logo = getByText("audiophile")
+    const logo = document.querySelector("img") as HTMLImageElement
 
-    expect(logo).toBeInTheDocument()
+    expect(logo.src).toContain("http://localhost/icons/menu.svg")
   })
 })
