@@ -9,7 +9,10 @@ interface CategoryProps {
 
 export default function CategoryItem({ img, route, title }: CategoryProps) {
   return (
-    <div className="relative rounded-lg h-[165px] flex-col flex items-center justify-center bg-gray-100 w-[327px] md:w-[223px]">
+    <div
+      data-testid="category-item"
+      className="relative rounded-lg h-[165px] flex-col flex items-center justify-center bg-gray-100 w-[327px] md:w-[223px]"
+    >
       <Image
         className="absolute -top-12"
         width={80}
