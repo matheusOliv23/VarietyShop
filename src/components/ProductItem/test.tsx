@@ -23,7 +23,7 @@ describe("<ProductItem />", () => {
     )
 
     const name = getByText(produtItem.name)
-    const price = getByText(String(produtItem.price))
+    const price = getByText(String(`R$ ${produtItem.price}`))
     const img = document.querySelector("img") as HTMLImageElement
     const button = getByRole("button", { name: "SEE PRODUCT" })
 
