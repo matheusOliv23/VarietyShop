@@ -4,7 +4,7 @@ import Button from "../Button"
 export default function Hero() {
   return (
     <section className="bg-dark-150 lg:px-10 w-full lg:bg-right bg-no-repeat">
-      <div className="max-w-6xl items-center lg:flex-row m-auto flex justify-between">
+      <div className="max-w-7xl items-center lg:flex-row m-auto flex justify-between">
         <div className="text-white absolute lg:relative text-center lg:text-left">
           <p className="text-sm opacity-50 tracking-[10px]">NEW PRODUCT</p>
           <h1 className="font-bold text-6xl my-6">XX99 Mark II HeadphoneS</h1>

@@ -17,7 +17,7 @@ export default function Header({ nav }: NavItemsProps) {
       className="bg-dark-150 m-auto py-8 px-10 w-full text-white"
       data-testid="navbar"
     >
-      <div className="flex items-center justify-between m-auto pb-6 max-w-6xl border-b-[0.2px] border-[#ffffff14]">
+      <div className="flex items-center justify-between m-auto pb-6 max-w-7xl border-b-[0.2px] border-[#ffffff14]">
         <span className="flex gap-10 items-center">
           <p className="md:hidden flex">
             <Image

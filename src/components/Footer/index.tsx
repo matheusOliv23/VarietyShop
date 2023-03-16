@@ -22,49 +22,57 @@ export default function Footer({
   socialIcons
 }: FooterProps) {
   return (
-    <div className="md:h-[400px] md:px-10 lg:pt-16 px-6 py-10 md:pb-11 md:pt-14 w-full bg-dark-50">
-      <div className="mb-9 items-center gap-6 flex md:flex-row flex-col justify-between">
-        <Image alt="Logo image" width={143} height={25} src="/icons/logo.svg" />
-        <div className="flex gap-8 text-white">
-          {menu.map((item) => (
-            <li
-              key={item.id}
-              data-testid="footer-item"
-              className="hover:text-orange-100 list-none transition duration-500"
-            >
-              <Link
-                href={item.route}
-                data-testid={`nav-item`}
+    <footer className="bg-dark-50">
+      <div className="md:h-[400px] max-w-7xl m-auto md:px-10 lg:pt-16 px-6 py-10 md:pb-11 md:pt-14 w-full">
+        <div className="mb-9 items-center gap-6 flex md:flex-row flex-col justify-between">
+          <Image
+            alt="Logo image"
+            width={143}
+            height={25}
+            src="/icons/logo.svg"
+          />
+          <div className="flex gap-8 text-white">
+            {menu.map((item) => (
+              <li
                 key={item.id}
-                passHref
+                data-testid="footer-item"
+                className="hover:text-orange-100 list-none transition duration-500"
               >
-                {item.title}
-              </Link>
-            </li>
-          ))}
+                <Link
+                  href={item.route}
+                  data-testid={`nav-item`}
+                  key={item.id}
+                  passHref
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </div>
+        </div>
+
+        <p className="font-medium font-manrope lg:max-w-[540px] text-white mb-14 opacity-50">
+          {text}
+        </p>
+
+        <div className="flex md:flex-row flex-col items-center gap-6 justify-center md:justify-between">
+          <p className="font-bold opacity-50 text-white">{allRights}</p>
+          <div className="flex gap-4">
+            {socialIcons.map((item) => (
+              <a
+                data-testid="social-item"
+                className="cursor-pointer transition-all ease-out duration-500 hover:text-orange-100 text-white"
+                key={item.id}
+                target="_blank"
+                href={item.href}
+                rel="noreferrer"
+              >
+                <Icon width={32} height={32} icon={item.icon} />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-
-      <p className="font-medium font-manrope lg:max-w-[540px] text-white mb-14 opacity-50">
-        {text}
-      </p>
-
-      <div className="flex md:flex-row flex-col items-center gap-6 justify-center md:justify-between">
-        <p className="font-bold opacity-50 text-white">{allRights}</p>
-        <div className="flex gap-4">
-          {socialIcons.map((item) => (
-            <a
-              data-testid="social-item"
-              className="cursor-pointer transition-all ease-out duration-500 hover:text-orange-100 text-white"
-              key={item.id}
-              target="_blank"
-              href={item.href} rel="noreferrer"
-            >
-              <Icon width={32} height={32} icon={item.icon} />
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
+    </footer>
   )
 }
