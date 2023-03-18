@@ -27,7 +27,7 @@ describe("<Headline />", () => {
     const title = getByText(headlineMock.title)
     const subtitle = getByText(headlineMock.subtitle)
 
-    expect(text).toHaveClass("text-black")
+    expect(text).toHaveClass("text-orange-100")
     expect(title).toHaveClass("text-black")
     expect(subtitle).toHaveClass("text-black")
   })

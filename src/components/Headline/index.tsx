@@ -21,7 +21,7 @@ export default function Headline({
     <div className={`text-center lg:text-left`}>
       <p
         className={`${
-          variation === "dark" ? "text-black" : "text-white"
+          variation === "dark" ? "text-orange-100" : "text-white"
         } text-sm opacity-50 tracking-[10px]`}
       >
         {text}
