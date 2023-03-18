@@ -11,7 +11,7 @@ export default function CategoryItem({ img, route, title }: CategoryProps) {
   return (
     <div
       data-testid="category-item"
-      className="relative rounded-lg h-[165px] flex-col flex items-center justify-center bg-gray-100 w-[327px] md:w-[223px]"
+      className="relative rounded-lg h-[165px] flex-col flex items-center justify-center bg-gray-100 w-[327px] md:w-[350px]"
     >
       <Image
         className="absolute -top-12"
@@ -25,7 +25,7 @@ export default function CategoryItem({ img, route, title }: CategoryProps) {
       </p>
       <Link
         href={route}
-        className="text-sm flex items-center gap-3 text-black opacity-50 font-bold"
+        className="text-sm hover:text-orange-100 flex items-center gap-3 text-black opacity-50 font-bold"
       >
         SHOP
         <svg
