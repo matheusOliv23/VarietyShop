@@ -2,11 +2,12 @@ import Image from "next/image"
 import Link from "next/link"
 import Button from "../Button"
 
-interface ProductItemProps {
+export interface ProductItemProps {
   id: string
   price: number
   name: string
   image: string
+  description?: string
 }
 
 export default function ProductItem({

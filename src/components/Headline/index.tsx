@@ -1,21 +1,20 @@
 import Link from "next/link"
 import Button from "../Button"
+import { ProductItemProps } from "../ProductItem"
 
 interface HeadlineProps {
-  title: string
-  text: string
-  id: string
+  product: ProductItemProps
   subtitle: string
   variation?: "light" | "dark"
   category?: string
+  text: string
 }
 export default function Headline({
-  id,
   category,
   subtitle,
-  text,
-  title,
-  variation = "dark"
+  product,
+  variation = "dark",
+  text
 }: HeadlineProps) {
   return (
     <div className={`text-center lg:text-left`}>
@@ -31,7 +30,7 @@ export default function Headline({
           variation === "dark" ? "text-black" : "text-white"
         } font-bold text-6xl my-6 max-w-[396px]`}
       >
-        {title}
+        {product.name}
       </h1>
       <p
         className={`${
@@ -40,7 +39,7 @@ export default function Headline({
       >
         {subtitle}
       </p>
-      <Link href={`/${category}/${id}`} passHref>
+      <Link href={`/${category}/${product.id}`} passHref>
         <Button variant="PRIMARY">SEE PRODUCT </Button>
       </Link>
     </div>
