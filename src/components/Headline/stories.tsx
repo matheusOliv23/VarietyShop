@@ -14,16 +14,14 @@ const Template: ComponentStory<typeof Headline> = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  product: { name: headlineMock.product.name, id: "", image: "", price: 1 },
-  subtitle: headlineMock.subtitle,
+  product: { name: headlineMock.product.name, id: "", image: "", price: 1 , description: headlineMock.product.description},
   text: headlineMock.text,
   variation: "dark"
 }
 
 export const LightTheme = Template.bind({})
 LightTheme.args = {
-  product: { name: headlineMock.product.name, id: "", image: "", price: 1 },
-  subtitle: headlineMock.subtitle,
+  product: { name: headlineMock.product.name, id: "", image: "", price: 1, description: headlineMock.product.description },
   text: headlineMock.text,
   variation: "light"
 }

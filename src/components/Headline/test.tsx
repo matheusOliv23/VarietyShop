@@ -11,7 +11,7 @@ describe("<Headline />", () => {
 
     const text = getByText(headlineMock.text)
     const name = getByText(headlineMock.product.name)
-    const subtitle = getByText(headlineMock.subtitle)
+    const subtitle = getByText(headlineMock.product.description)
     const button = getByRole("link", { name: "SEE PRODUCT" })
 
     expect(button).toBeInTheDocument()
@@ -25,7 +25,7 @@ describe("<Headline />", () => {
 
     const text = getByText(headlineMock.text)
     const title = getByText(headlineMock.product.name)
-    const subtitle = getByText(headlineMock.subtitle)
+    const subtitle = getByText(headlineMock.product.description)
 
     expect(text).toHaveClass("text-orange-100")
     expect(title).toHaveClass("text-black")
@@ -37,7 +37,7 @@ describe("<Headline />", () => {
 
     const text = getByText(headlineMock.text)
     const title = getByText(headlineMock.product.name)
-    const subtitle = getByText(headlineMock.subtitle)
+    const subtitle = getByText(headlineMock.product.description)
 
     expect(text).toHaveClass("text-white")
     expect(title).toHaveClass("text-white")
