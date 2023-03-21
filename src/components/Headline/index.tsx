@@ -26,7 +26,7 @@ export default function Headline({
       <h1
         className={`${
           variation === "dark" ? "text-black" : "text-white"
-        } font-bold text-6xl my-6 max-w-[396px]`}
+        } font-bold text-4xl md:text-6xl my-6 max-w-[396px]`}
       >
         {product.name}
       </h1>

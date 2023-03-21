@@ -22,7 +22,7 @@ export default function Footer({
   socialIcons
 }: FooterProps) {
   return (
-    <footer className="bg-dark-50 md:absolute w-full bottom-0">
+    <footer className="bg-dark-50 w-full bottom-0">
       <div className="md:h-[400px] max-w-7xl m-auto md:px-10 lg:pt-16 px-6 py-10 md:pb-11 md:pt-14 w-full">
         <div className="mb-9 items-center gap-6 flex md:flex-row flex-col justify-between">
           <Image
