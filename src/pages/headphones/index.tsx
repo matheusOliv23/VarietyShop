@@ -8,9 +8,11 @@ export default function Headphones() {
   return (
     <Layout>
       <TitleContainer title="HEADPHONES" />
-      <div className="max-w-6xl m-auto">
+      <section className="max-w-6xl m-auto">
         <ProductHeadline product={headlineMock.product} />
-      </div>
+        <ProductHeadline product={headlineMock.product} />
+        <ProductHeadline product={headlineMock.product} />
+      </section>
     </Layout>
   )
 }
