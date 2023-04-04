@@ -51,7 +51,7 @@ export default function Footer({
           </div>
         </div>
 
-        <p className="font-medium font-manrope lg:max-w-[540px] text-white mb-14 opacity-50">
+        <p className="font-medium text-center md:text-left font-manrope lg:max-w-[540px] text-white mb-14 opacity-50">
           {text}
         </p>
 
