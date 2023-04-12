@@ -1,9 +1,10 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen, fireEvent } from "@testing-library/react"
+import Image from "next/image"
 
 import Header from "./index"
 import { navMock } from "./mock"
 
-const { getByTestId, getAllByTestId } = screen
+const { getByTestId, getAllByTestId, getByRole, getByAltText } = screen
 
 describe("<Header />", () => {
   it("should render by default", () => {
@@ -32,5 +33,29 @@ describe("<Header />", () => {
     const logo = document.querySelector("img") as HTMLImageElement
 
     expect(logo.src).toContain("http://localhost/icons/menu.svg")
+  })
+
+  test("renders shop cart button with correct attributes", () => {
+    const mockOnClick = jest.fn()
+    render(
+      <Image
+        onClick={mockOnClick}
+        alt="Card icon"
+        width={24}
+        height={23}
+        className="cursor-pointer"
+        src="/icons/cart.svg"
+      />
+    )
+
+    const image = getByAltText("Card icon")
+    expect(image).toBeInTheDocument()
+    expect(image).toHaveAttribute("src", "/icons/cart.svg")
+    expect(image).toHaveAttribute("width", "24")
+    expect(image).toHaveAttribute("height", "23")
+
+    const button = getByRole("img")
+    expect(button).toBeInTheDocument()
+    fireEvent.click(button)
   })
 })
