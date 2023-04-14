@@ -1,5 +1,5 @@
 export const buttonStyles =
-  "w-40 h-12 px-6 font-bold transition-all text-xs uppercase"
+  "w-full h-12 px-6 font-bold transition-all text-xs uppercase"
 
 export const buttonVariant = {
   PRIMARY: "bg-orange-100 text-white hover:bg-orange-50",
