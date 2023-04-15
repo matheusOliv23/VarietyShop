@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
+import ShopCartModal from "../ShopCartModal"
+import { useState } from "react"
 
 export interface NavType {
   id: number
@@ -12,11 +14,13 @@ interface NavItemsProps {
 }
 
 export default function Header({ nav }: NavItemsProps) {
+  const [open, setOpen] = useState(false)
   return (
     <header
       className="bg-dark-150 m-auto py-8 px-10 w-full text-white"
       data-testid="navbar"
     >
+      <ShopCartModal open={open} onClose={() => setOpen(false)} />
       <div className="flex items-center justify-between m-auto pb-6 max-w-7xl border-b-[0.2px] border-[#ffffff14]">
         <span className="flex gap-10 items-center">
           <p className="md:hidden flex">
@@ -56,7 +60,14 @@ export default function Header({ nav }: NavItemsProps) {
           </ul>
         </nav>
 
-        <Image alt="Card icon" width={24} height={23} src="/icons/cart.svg" />
+        <Image
+          onClick={() => setOpen(true)}
+          alt="Card icon"
+          width={24}
+          height={23}
+          className="cursor-pointer"
+          src="/icons/cart.svg"
+        />
       </div>
     </header>
   )
