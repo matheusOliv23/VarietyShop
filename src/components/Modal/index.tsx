@@ -41,7 +41,7 @@ const Modal: React.FC<ModalProps> = ({ open, children, onClose }) => (
           leaveFrom="opacity-100 translate-y-0 sm:scale-100"
           leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
         >
-          <div className="relative inline-block transform overflow-visible rounded-lg w-[327px] h-[488px] bg-white p-8 text-left align-bottom shadow-xl transition-all sm:align-middle">
+          <div className="relative inline-block transform overflow-visible rounded-lg h-[488px] bg-white p-8 text-left align-bottom shadow-xl transition-all sm:align-middle">
             {children}
           </div>
         </Transition.Child>

@@ -50,7 +50,9 @@ export default function Product() {
                 <span>1</span>
                 <AiOutlineMinus />
               </div>
-              <Button variant="PRIMARY">ADD TO CART </Button>
+              <Button className="!w-40" variant="PRIMARY">
+                ADD TO CART{" "}
+              </Button>
             </div>
           </div>
         </section>
