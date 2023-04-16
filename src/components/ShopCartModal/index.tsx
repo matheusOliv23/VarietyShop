@@ -30,9 +30,9 @@ export default function ShopCartModal({ open, onClose }: ShopCardModalProps) {
                     alt="Image"
                   />
                 </div>
-                <div>
+                <div className="font-bold">
                   <p>XX99 MK II</p>
-                  <p>$ 2,999</p>
+                  <p className="opacity-50 text-sm">$ 2,999</p>
                 </div>
               </div>
 
